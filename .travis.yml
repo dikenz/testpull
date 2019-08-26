@@ -1,0 +1,10 @@
+  # manual triger 2019-08-26 10:01
+language: minimal
+env:
+  - DIKENZ_VERSION=0.1
+script:
+  - env
+  - docker build -t myimage .
+  - docker run -it myimage rpm -qa
+notifications:
+  email: false
